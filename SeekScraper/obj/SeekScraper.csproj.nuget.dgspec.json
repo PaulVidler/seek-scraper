@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Paul\\source\\repos\\SeekScraper\\SeekScraper\\SeekScraper.csproj": {}
+    "C:\\Users\\Paul\\Documents\\GitHub\\seek-scraper\\SeekScraper\\SeekScraper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Paul\\source\\repos\\SeekScraper\\SeekScraper\\SeekScraper.csproj": {
+    "C:\\Users\\Paul\\Documents\\GitHub\\seek-scraper\\SeekScraper\\SeekScraper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paul\\source\\repos\\SeekScraper\\SeekScraper\\SeekScraper.csproj",
+        "projectUniqueName": "C:\\Users\\Paul\\Documents\\GitHub\\seek-scraper\\SeekScraper\\SeekScraper.csproj",
         "projectName": "SeekScraper",
-        "projectPath": "C:\\Users\\Paul\\source\\repos\\SeekScraper\\SeekScraper\\SeekScraper.csproj",
+        "projectPath": "C:\\Users\\Paul\\Documents\\GitHub\\seek-scraper\\SeekScraper\\SeekScraper.csproj",
         "packagesPath": "C:\\Users\\Paul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paul\\source\\repos\\SeekScraper\\SeekScraper\\obj\\",
+        "outputPath": "C:\\Users\\Paul\\Documents\\GitHub\\seek-scraper\\SeekScraper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

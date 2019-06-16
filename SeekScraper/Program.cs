@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Xml;
 
@@ -11,14 +12,14 @@ namespace SeekScraper
         {
             var url = @"https://www.seek.com.au/jobs?keywords=c%23";
 
-            ExtractHref(url);
+            ExtractSearchHref(url);
 
             GetHTMLAsync();
             Console.ReadLine();
 
         }
 
-        private static async void GetHTMLAsync()
+        public static async void GetHTMLAsync()
         {
             var url = @"https://www.seek.com.au/jobs?keywords=c%23";
 
@@ -31,12 +32,16 @@ namespace SeekScraper
             // Console.WriteLine(html);
         }
 
-        static void ExtractHref(string URL)
+        static List<string> ExtractSearchHref(string URL)
         {
             // declaring & loading dom
             HtmlWeb web = new HtmlWeb();
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc = web.Load(URL);
+
+            List<string> links = new List<string>();
+
+
             // extracting all links
             foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
             {
@@ -45,11 +50,13 @@ namespace SeekScraper
                 // extracting links that are returned in the result
                 if (att.Value.Contains("a") && att.Value.Contains("/job/"))
                 {
-                    // showing output (to be changed)
-
-                    Console.WriteLine(att.Value);
+                    // add links to list
+                    links.Add(att.Value);
+                    // Console.WriteLine(att.Value);
                 }
             }
+
+            return links;
         }
     }
 }
