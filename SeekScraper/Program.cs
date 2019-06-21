@@ -8,45 +8,57 @@ namespace SeekScraper
 {
     class Program
     {
+        int dapperCount = 0;
+        int mySqlCount = 0;
+        int mvcCount = 0;
+        int agileCount = 0;
+        int yearsExpCount = 0;
+        int entityCount = 0;
+        int typeScriptCount = 0;
+        int coreCount = 0;
+        int devOpsCount = 0;
+        int azureCount = 0;
+        int cloudCount = 0;
+        int wpfCount = 0;
+        int awsCount = 0;
+        
+
+
+
         static void Main(string[] args)
         {
+            // method for returning list of job links
+            // ExtractSearchHref(string URL)
+
+            // method returns html content strings
+            // static void pageResults(string urlExt)
+
+            int scopingCount = 0;
+
             string url = "https://www.seek.com.au/jobs-in-information-communication-technology?keywords=c%23&subclassification=6290%2C6291%2C6287%2C6302";
 
-            ExtractSearchHref(url);
+            var linkList = ExtractSearchHref(url);
 
-            // GetHTMLAsync();
-            Console.ReadLine();
+
+            foreach (var link in linkList)
+            {
+                // Console.WriteLine(pageResults(link));
+                var result = pageResults(link);
+
+                Console.WriteLine(pageResults(link));
+
+                //if (result.Contains("scoping"))
+                //{
+                //    scopingCount++;
+                //}
+
+                //Console.WriteLine(scopingCount);
+                Console.ReadKey();
+            }
 
         }
 
-        //public static async void GetHTMLAsync()
-        //{
-        //    //          https://www.seek.com.au/jobs-in-information-communication-technology?keywords=c%23&page=3&subclassification=6290%2C6291%2C6287%2C6302
-
-        //    var url = @"https://www.seek.com.au/jobs-in-information-communication-technology?keywords=c%23&subclassification=6290%2C6291%2C6287%2C6302";
-
-
-        //    // show all html on 'url' variable
-        //    //var httpClient = new HttpClient();
-        //    //var html = await httpClient.GetStringAsync(url);
-
-        //    //var htmlDocument = new HtmlDocument();
-        //    //htmlDocument.LoadHtml(html);
-
-        //    // Console.WriteLine(html);
-
-
-        //    // extract links from 'url' variable and print to console
-        //    var linksList = ExtractSearchHref(url);
-        //    foreach (var item in linksList)
-        //    {
-        //        pageResults(item);
-        //    }
-
-        //}
-
-
-
+       
         // method for returning list of job links
         static List<string> ExtractSearchHref(string URL)
         {
@@ -74,15 +86,16 @@ namespace SeekScraper
             return links;
         }
 
-        static void pageResults(string urlExt)
+        // method returns html content strings
+        static string pageResults(string urlExt)
         {
             // declaring & loading dom
             HtmlWeb webJobPage = new HtmlWeb();
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             doc = webJobPage.Load("https://www.seek.com.au" + urlExt);
 
-            Console.WriteLine(doc.Text.ToString());
-            Console.ReadKey();
+            // Console.WriteLine(doc.Text.ToString());
+            return doc.Text.ToString();
         }
     }
 }
