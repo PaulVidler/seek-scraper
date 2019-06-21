@@ -10,28 +10,44 @@ namespace SeekScraper
     {
         static void Main(string[] args)
         {
-            var url = @"https://www.seek.com.au/jobs?keywords=c%23";
+            string url = "https://www.seek.com.au/jobs-in-information-communication-technology?keywords=c%23&subclassification=6290%2C6291%2C6287%2C6302";
 
             ExtractSearchHref(url);
 
-            GetHTMLAsync();
+            // GetHTMLAsync();
             Console.ReadLine();
 
         }
 
-        public static async void GetHTMLAsync()
-        {
-            var url = @"https://www.seek.com.au/jobs?keywords=c%23";
+        //public static async void GetHTMLAsync()
+        //{
+        //    //          https://www.seek.com.au/jobs-in-information-communication-technology?keywords=c%23&page=3&subclassification=6290%2C6291%2C6287%2C6302
 
-            var httpClient = new HttpClient();
-            var html = await httpClient.GetStringAsync(url);
+        //    var url = @"https://www.seek.com.au/jobs-in-information-communication-technology?keywords=c%23&subclassification=6290%2C6291%2C6287%2C6302";
 
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(html);
 
-            // Console.WriteLine(html);
-        }
+        //    // show all html on 'url' variable
+        //    //var httpClient = new HttpClient();
+        //    //var html = await httpClient.GetStringAsync(url);
 
+        //    //var htmlDocument = new HtmlDocument();
+        //    //htmlDocument.LoadHtml(html);
+
+        //    // Console.WriteLine(html);
+
+
+        //    // extract links from 'url' variable and print to console
+        //    var linksList = ExtractSearchHref(url);
+        //    foreach (var item in linksList)
+        //    {
+        //        pageResults(item);
+        //    }
+
+        //}
+
+
+
+        // method for returning list of job links
         static List<string> ExtractSearchHref(string URL)
         {
             // declaring & loading dom
@@ -40,7 +56,6 @@ namespace SeekScraper
             doc = web.Load(URL);
 
             List<string> links = new List<string>();
-
 
             // extracting all links
             foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
@@ -57,6 +72,17 @@ namespace SeekScraper
             }
 
             return links;
+        }
+
+        static void pageResults(string urlExt)
+        {
+            // declaring & loading dom
+            HtmlWeb webJobPage = new HtmlWeb();
+            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc = webJobPage.Load("https://www.seek.com.au" + urlExt);
+
+            Console.WriteLine(doc.Text.ToString());
+            Console.ReadKey();
         }
     }
 }

@@ -9,3 +9,14 @@ C:\Users\Paul\source\repos\SeekScraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekS
 C:\Users\Paul\source\repos\SeekScraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.AssemblyInfo.cs
 C:\Users\Paul\source\repos\SeekScraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.dll
 C:\Users\Paul\source\repos\SeekScraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.pdb
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\bin\Debug\netcoreapp2.1\SeekScraper.deps.json
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\bin\Debug\netcoreapp2.1\SeekScraper.runtimeconfig.json
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\bin\Debug\netcoreapp2.1\SeekScraper.runtimeconfig.dev.json
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\bin\Debug\netcoreapp2.1\SeekScraper.dll
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\bin\Debug\netcoreapp2.1\SeekScraper.pdb
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.csprojAssemblyReference.cache
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.csproj.CoreCompileInputs.cache
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.AssemblyInfoInputs.cache
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.AssemblyInfo.cs
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.dll
+C:\Users\Paul\Documents\GitHub\seek-scraper\SeekScraper\obj\Debug\netcoreapp2.1\SeekScraper.pdb
