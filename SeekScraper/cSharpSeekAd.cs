@@ -20,7 +20,16 @@ namespace SeekScraper
         public bool wpfCount { get; set; }
         public bool awsCount { get; set; }
 
+        public void keywordCounter(string htmlString)
+        {
+            // not exactly sure how to loop through each keyword property with a heap of if else statements
+            if (htmlString.Contains(KEYWORD_IN_HERE))
+            {
+                keyword = true;
+            }
 
+
+        }
 
     }
 }
