@@ -58,7 +58,7 @@ namespace SeekScraper
                     SearchResults = (int)jobCount;
                 }
 
-                /* This gets us each Joband Url */
+                /* This gets us each Job and Url */
                 if (Seeker.TryGetJob(node.InnerHtml, out var jobUrl)) {
 
                     var strtimeSpan = node.Descendants("span").ElementAt(DATE_IDX);
@@ -81,6 +81,9 @@ namespace SeekScraper
 
         private static DateTime DateFromSpanStr(HtmlNode strtimeSpan)
         {
+            //todo: strtimeSpan is the "1 day ago" or "6hr ago bullshit"
+            //not sure how we can get real date here. might have to traverse the job url
+            //and look for it inside (scrape the job page)
 
             return DateTime.UtcNow;
         }
