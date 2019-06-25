@@ -8,7 +8,7 @@ namespace SeekScraper
     class seekSearch
     {
         // method for returning list of job links
-        static List<string> ExtractSearchHref(string URL)
+        public static List<string> ExtractSearchHref(string URL)
         {
             // declaring & loading dom
             HtmlWeb web = new HtmlWeb();

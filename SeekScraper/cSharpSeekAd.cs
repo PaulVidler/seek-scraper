@@ -23,10 +23,10 @@ namespace SeekScraper
         public void keywordCounter(string htmlString)
         {
             // not exactly sure how to loop through each keyword property with a heap of if else statements
-            if (htmlString.Contains(KEYWORD_IN_HERE))
-            {
-                keyword = true;
-            }
+            //if (htmlString.Contains(KEYWORD_IN_HERE))
+            //{
+            //    keyword = true;
+            //}
 
 
         }
