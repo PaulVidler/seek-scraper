@@ -6,19 +6,19 @@ namespace SeekScraper
 {
     class cSharpSeekAd : seekAd
     {
-        public bool dapperCount { get; set; }
-        public bool mySqlCount { get; set; }
-        public bool mvcCount { get; set; }
-        public bool agileCount { get; set; }
-        public bool yearsExpCount { get; set; }
-        public bool entityCount { get; set; }
-        public bool typeScriptCount { get; set; }
-        public bool devOpsCount { get; set; }
-        public bool dotNetCoreCount { get; set; }
-        public bool azureCount { get; set; }
-        public bool cloudCount { get; set; }
-        public bool wpfCount { get; set; }
-        public bool awsCount { get; set; }
+        public bool DapperCount { get; set; }
+        public bool MySqlCount { get; set; }
+        public bool MvcCount { get; set; }
+        public bool AgileCount { get; set; }
+        public bool YearsExpCount { get; set; }
+        public bool EntityCount { get; set; }
+        public bool TypeScriptCount { get; set; }
+        public bool DevOpsCount { get; set; }
+        public bool DotNetCoreCount { get; set; }
+        public bool AzureCount { get; set; }
+        public bool CloudCount { get; set; }
+        public bool WpfCount { get; set; }
+        public bool AwsCount { get; set; }
 
         public void keywordCounter(string htmlString)
         {

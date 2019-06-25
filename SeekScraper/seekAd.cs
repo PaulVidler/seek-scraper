@@ -6,8 +6,8 @@ namespace SeekScraper
 {
     class seekAd
     {
-        public string urlString { get; set; }
-        public DateTime listedDate { get; set; }
+        public string UrlString { get; set; }
+        public DateTime ListedDate { get; set; }
 
     }
 }

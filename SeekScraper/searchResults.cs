@@ -10,7 +10,7 @@ namespace SeekScraper
         
         // method returns html content strings from one page. Given the 'url' extension which is taken from the search results
         // 'url' string comes from 'seekAd' class
-        static string pageResults(string urlExt)
+        public static string pageResults(string urlExt)
         {
             // declaring & loading dom
             HtmlWeb webJobPage = new HtmlWeb();
