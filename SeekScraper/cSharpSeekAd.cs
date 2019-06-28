@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SeekScraper
 {
-    class cSharpSeekAd : seekAd
+    class cSharpSeekAd : SeekAd
     {
         public bool DapperCount { get; set; }
         public bool MySqlCount { get; set; }

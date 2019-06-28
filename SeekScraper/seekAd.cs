@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SeekScraper
 {
-    class seekAd
+    class SeekAd
     {
         public string Title { get; set; }
         public string UrlString { get; set; }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SeekScraper
 {
-    class searchResults
+    class SearchResults
     {
         
         // method returns html content strings from one page. Given the 'url' extension which is taken from the search results

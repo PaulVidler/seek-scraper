@@ -38,7 +38,7 @@ namespace SeekScraper
 
         public static async Task MainAsync(string lpUrl)
         {
-            var jobs = await seekSearch.ExtractSearchResults(lpUrl);
+            var jobs = await SeekSearch.ExtractSearchResults(lpUrl);
 
             foreach (var job in jobs)
             {

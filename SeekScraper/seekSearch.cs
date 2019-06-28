@@ -37,7 +37,7 @@ namespace SeekScraper
         }
     }
 
-    class seekSearch
+    class SeekSearch
     {
         //something like this bra
         static readonly Uri SEEK_BASE_URL = new Uri("https://www.seek.com.au");
@@ -45,9 +45,9 @@ namespace SeekScraper
 
         public static int SearchResults;
 
-        public static async Task<IEnumerable<seekAd>> ExtractSearchResults(string lpUrl)
+        public static async Task<IEnumerable<SeekAd>> ExtractSearchResults(string lpUrl)
         {
-            var urls     = new Collection<seekAd>();
+            var urls     = new Collection<SeekAd>();
             var web      = new HtmlWeb();
             var document = await web.LoadFromWebAsync(lpUrl);
 
@@ -66,7 +66,7 @@ namespace SeekScraper
 
                     if (strtimeSpan.InnerText != "Featured" && title != string.Empty)
                     {
-                        urls.Add(new seekAd()
+                        urls.Add(new SeekAd()
                         {
                             Title      = title, 
                             UrlString  = new Uri(SEEK_BASE_URL, jobUrl).AbsoluteUri,
